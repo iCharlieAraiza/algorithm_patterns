@@ -21,27 +21,27 @@
       }
 
       let left = 0,
-          right = array.length-1;
+          right = array.length-1,
+          sum;
       
         while(left<right){
-          //if(array[left] + array[right] === 0)
-          if(array[left] + array[right] === 0)
-          {
-            return [array[left], array[right]];
-          }else{
-              left++;
-              right--;
-          }
+            sum = array[left] + array[right]
+            if(sum === 0){
+                return [array[left], array[right]];
+            }else if(sum<0){
+                left++;
+            }else{
+                right--;
+            }
       }
 
       return false;
-      //(If) Un condicional: si array[left] + array[right] === 0, return [array[left], array[right]]
-      //(Else) Si no, left++, rigth--
-
-      //Se termina el ciclo while. Retorna false;
   }
 
-const array = [-8, -3, -1, 0, 1, 2, 3];
+
+//Test
+
+const array = [-8, -5, -1, 0, 1, 2, 3];
 
 console.log(sum(array))
 
