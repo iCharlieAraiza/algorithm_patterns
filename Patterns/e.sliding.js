@@ -17,7 +17,10 @@
  * @param: array[num], number
  * @returns: array[num] || Null 
  * 
+ * 
+ * 
  **/
+
  const sumElement = (array, el)=>{
     if(array.length < el){
         return null;
